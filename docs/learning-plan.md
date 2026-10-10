@@ -7,6 +7,10 @@ added or the order changes; don't let it go stale.
 Status legend: ✅ solved+verified in repo · 📥 imported from `D:\aa-coding-prep-java` (compiles,
 not yet reviewed/critiqued here) · 🔲 not yet added
 
+> **Caveat:** ✅ means a reference solution exists and was verified in this repo — it does **not**
+> mean you solved it independently (see `coding-guidance-handover.md` §5). Count a category as
+> done only after a blind re-solve with no help; the 📥 "twin" drills below are for that.
+
 ## Topic map (where code lives)
 All paths under `src/main/java/`. `dsa.*` = algorithm drills, `lld.*` = low-level design.
 
@@ -159,10 +163,33 @@ Choose → explore → un-choose. Easiest to hardest:
 - 🔲 Review pass: critique each 📥 file per CLAUDE.md rules and flip it to ✅.
 
 ## Okta Round 2 practice track (parallel to the phases above)
-State, roadmap, and attempt log live in `coding-guidance-handover.md` (same folder). Practice problems are
-presented one at a time and solved by the user; solved ones get added to the matching
-`dsa.<topic>` package and flipped to ✅ here. Next category: graph traversal / dependency
-ordering (feeds the Phase 8 backlog: topological sort, islands, union-find).
+State, roadmap, and attempt log live in `coding-guidance-handover.md` (same folder). Problems are
+presented one at a time and solved by the user; each gets a scaffold (statement, stub, verified
+test scenarios) in the matching `dsa.<topic>` package and flips to ✅ here once solved + critiqued.
+
+**Order for this track is priority-driven (handover §7), not the phase order above** — the
+phases are a dependency map for the whole repo; Okta Round 2 needs the medium tier of the
+Revisit/Next categories first.
+
+Done at easy level (self-reported 2026-10-10, assistance not recorded): longest substring
+without repeating characters; merge overlapping intervals. Intervals had no entry in this plan
+before — treat Merge Intervals as the on-ramp to the intervals rungs below.
+
+Medium ladder (tentative — adjust from observed results; one problem active at a time):
+
+| # | Category | Medium problem | Status |
+|---|---|---|---|
+| 1 | Sliding window (extremum invariant) | Longest subarray with bounded spread (max − min ≤ limit) | 🔲 `dsa.slidingwindow.LongestBoundedSpreadSubarray` — active |
+| 2 | Intervals | Insert interval, or min removals to make non-overlapping | not presented |
+| 3 | Hash aggregation + bounded heap | Top-K with tie-break comparator | not presented |
+| 4 | Graph / dependency ordering | Min rounds to finish tasks (cycle → -1) | 🔲 `dsa.graph.MinRoundsToFinishTasks` — scaffolded, queued |
+| 5 | Graph traversal | Grid components (islands) or shortest steps in a grid | not presented |
+| 6 | Composite data structures | O(1) insert/delete/getRandom, or LRU variant | not presented |
+| 7 | Binary search on answer | Capacity / rate feasibility search | not presented |
+
+Later (only after the rungs above are independent): stacks/queues, trees, prefix sums, greedy,
+basic DP, backtracking. Repo gaps this track exposes: no intervals set, thin graph set (2 files),
+binary search is classic-only, and composite structures sit late (Phase 11) despite being "Next".
 
 ## Source material
 - `docs/coding-guidance-handover.md` — Okta Round 2 prep handover (copied from Downloads 2026-10-10).

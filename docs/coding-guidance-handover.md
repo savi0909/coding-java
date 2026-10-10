@@ -203,4 +203,7 @@ Append one row per attempt. Assistance: independent / hint-assisted / guided / d
 
 | Date | Category | Task (one line) | Assistance | Concrete errors / gaps | Next to revisit |
 |---|---|---|---|---|---|
-| 2026-10-10 | Graph traversal / dependency ordering | Minimum rounds to finish tasks with prerequisites (-1 on cycle) | — (presented, awaiting approach) | — | — |
+| 2026-10-10 | Sliding window | Longest substring without repeating characters (easy) | unrecorded (self-reported done) | — | Blind re-solve of a related variant |
+| 2026-10-10 | Sorting and intervals | Merge overlapping intervals (easy) | unrecorded (self-reported done) | — | Related interval pattern (insert / min removals) |
+| 2026-10-10 | Sliding window (extremum invariant) | Longest subarray with bounded spread (medium); scaffold `dsa.slidingwindow.LongestBoundedSpreadSubarray` | — (presented, awaiting approach; implementing in IDE) | — | — |
+| 2026-10-10 | Graph traversal / dependency ordering | Minimum rounds to finish tasks with prerequisites (-1 on cycle); scaffold `dsa.graph.MinRoundsToFinishTasks` | — (presented, awaiting approach; implementing in IDE) | — | — |
